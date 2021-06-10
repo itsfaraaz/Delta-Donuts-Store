@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>DELTADONUTS</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display">
+    <link rel="stylesheet" href="assets/css/VCR%20OSD%20Mono.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/smoothproducts.css">
+    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RMCSKQ5V1F"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RMCSKQ5V1F');
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container">
+            <img class="logo" src="assets/img/deltadonut.png">
+            <h3 class="questions">QUESTIONS? <a class="send-dm" target="_blank" href="https://www.instagram.com/itsfaraaz/">SEND A DM</a></h3>
+        </div>
+    </nav>
+
+    <main class="page landing-page">
+        <section class="clean-block clean-info dark">
+            <div class="container">
+                <div class="block-heading"><img id="order-now" src="assets/img/order-now.png">
+                    <p class="text">The best donuts from Krispy Kreme are coming to Drexel's campus for a limited time.</p>
+                </div>
+                <div class="row align-items-center" id="buy-row" onclick="handleOrderNow()">
+                    <div class="col-md-6"><img id="donut-pic" src="assets/img/donnuts.jpeg"></div>
+                    <div class="col-md-6">
+                        <h3 class="header">DOZEN OF GLAZED DONUTS</h3>
+                        <div class="getting-started-info">
+                            <p class="text"><strong>$9.99</strong></p>
+                            <p class="text">One dozen of Krispy Kreme's delicious glazed donuts. Choose either pickup or delivery. All orders completed by <strong>June 5th, 2021</strong>. Last day to order is&nbsp;<strong>June 2nd, 2021.</strong></p>
+                        </div><button class="btn btn-outline-primary btn-lg" type="button">ORDER NOW</button>
+                    </div>
+                </div>
+                <div class="row align-items-center" id="delivery-method">
+                    <div class="col-md-6">
+                        <h3 class="header">PICKUP OR DELIVERY?</h3>
+                        <div class="getting-started-info">
+                            <p class="text">Delivery is <strong>$1 extra</strong>. Pickup will be on Drexel's campus. You will be emailed when your order is ready.</p>
+                        </div><button class="btn btn-outline-primary btn-lg button-margin" type="button" onclick="isPickingUp()">PICKUP</button><button class="btn btn-outline-primary btn-lg" type="button" onclick="wantsDelivering()">DELIVERY</button>
+                    </div>
+                </div>
+                <div class="row align-items-center" id="payment-row">
+                    <div class="col-md-6">
+                        <h3 class="header">PAY VIA VENMO</h3>
+                        <div class="getting-started-info">
+                            <p class="text"><strong>ORDER TOTAL:</strong>&nbsp;$9.99</p>
+                            <p id="delivery-fee" class="text" style="margin-top: -20px;"><strong>DELIVERY FEE:</strong> $1.00</p>
+                            <p id="pay-instructions" class="text">Come back to this page once you pay to submit your information</p><a class="btn btn-outline-primary btn-lg button-margin-botton button-margin" role="button" id="payWithVenmo" href="#" onclick="clickedOnPayButton()">PAY WITH VENMO</a><a class="btn btn-outline-primary active btn-lg" role="button" id="done-paying-button" href="#" onclick="handleDonePayment()">I'M DONE PAYING</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center" id="details-row">
+                    <div class="col-md-6">
+                        <h3 class="header">ALMOST THERE...</h3>
+                        <form action="https://send.pageclip.co/eMJzSVFN80ZlA8oDso9q0ZWojHwHom8Z" class="pageclip-form" method="post">
+                            <label>FULL NAME*</label>
+                            <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="form-control" type="text" required="" name="full-name">
+                            
+                            <label class="input-margin-top">VENMO USERNAME*</label>
+                            <p class="input-help-text">The same one you paid with</p>
+                            
+                            <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="form-control" type="text" required="" name="venmo">
+                            
+                            <label class="input-margin-top">EMAIL*</label>
+                            
+                            <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="form-control" type="email" required="" name="email">
+                            
+                            <label class="input-margin-top">PHONE NUMBER*</label>
+                            
+                            <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="form-control" type="tel" required="" name="phone">
+                            
+                            <label class="input-margin-top" id="address-label">DELIVERY ADDRESS*</label>
+                            
+                            <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="form-control" type="text" id="address-input" name="address">
+
+                            <label class="input-margin-top">REFERRED BY</label>
+                            <p class="input-help-text">OPTIONAL! If you saw this on someone's story or are friends with a brother, let us know who!</p>
+                            <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="form-control" type="text" name="referred-by">
+                            
+                            <button class="btn btn-outline-primary btn-lg pageclip-form__submit" id="complete-order" type="submit">COMPLETE ORDER</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center">
+        <p id="copyright">© 2021 DREXEL DELTA SIGMA PHI</p>
+        <a id="fkv" target="_blank" href="https://faraaz.me" class="send-dm"> A FARAAZ KHAN VISION</a>
+    </footer>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="assets/js/smoothproducts.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
